@@ -51,12 +51,15 @@ foreach (var file in Directory
 		public void <#= testName #>()
 		{
 <#+
+var relativeFile = Path.Combine("Maml", relativePath, name + ".aml").Replace(@"\", @"\\");
+var relativeExpectedFile = Path.Combine("Maml", relativePath, name + expectedFileSuffix).Replace(@"\", @"\\");
+
 if (File.Exists(expectedFile))
 {
 #>
 			TestRoundTrip(
-				topic: File.ReadAllText(@"<#= file #>"), 
-				expected: File.ReadAllText(@"<#= expectedFile #>")<#+ if (expectedInvalidNodeCount.HasValue) { #>,
+				topic: File.ReadAllText(@"<#= relativeFile #>"), 
+				expected: File.ReadAllText(@"<#= relativeExpectedFile #>")<#+ if (expectedInvalidNodeCount.HasValue) { #>,
 				expectedInvalidNodeCount: <#= expectedInvalidNodeCount.Value #><#+ } if (expectedInvalidAttributeCount.HasValue) { #>,
 				expectedInvalidAttributeCount: <#= expectedInvalidAttributeCount.Value #><#+ } #>);
 <#+
@@ -64,7 +67,7 @@ if (File.Exists(expectedFile))
 else
 {
 #>
-			TestRoundTrip(topic: File.ReadAllText(@"<#= file #>")<#+ if (expectedInvalidNodeCount.HasValue) { #>,
+			TestRoundTrip(topic: File.ReadAllText(@"<#= relativeFile #>")<#+ if (expectedInvalidNodeCount.HasValue) { #>,
 				expectedInvalidNodeCount: <#= expectedInvalidNodeCount.Value #><#+ } if (expectedInvalidAttributeCount.HasValue) { #>,
 				expectedInvalidAttributeCount: <#= expectedInvalidAttributeCount.Value #><#+ } #>);
 <#+

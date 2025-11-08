@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.10
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Artifacts", "Artifacts", "{D97ABB2F-F071-4D84-A5C7-90A2FF1F083B}"
 	ProjectSection(SolutionItems) = preProject
@@ -68,6 +68,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Labs", "Labs", "{5158086B-6
 		External References\Labs\DaveSexton.Labs.dll = External References\Labs\DaveSexton.Labs.dll
 		External References\Labs\DaveSexton.Labs.pdb = External References\Labs\DaveSexton.Labs.pdb
 		External References\Labs\DaveSexton.Labs.xml = External References\Labs\DaveSexton.Labs.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		CLAUDE.md = CLAUDE.md
 	EndProjectSection
 EndProject
 Global

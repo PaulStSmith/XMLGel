@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System;
+using System.IO;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Xml;
@@ -12,7 +14,26 @@ namespace DaveSexton.XmlGel.UI
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		private const string dialogDefaultFolder = @"C:\Users\Dave\Documents\SandcastleMAMLGuide\Content\";
+		private static readonly string dialogDefaultFolder = GetDefaultDocumentFolder();
+
+		private static string GetDefaultDocumentFolder()
+		{
+			// Use a reasonable default folder - user's Documents folder
+			var documentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+			var defaultFolder = Path.Combine(documentsFolder, "MAML Documents");
+			
+			// Create the folder if it doesn't exist
+			try
+			{
+				Directory.CreateDirectory(defaultFolder);
+				return defaultFolder;
+			}
+			catch
+			{
+				// Fall back to Documents folder if we can't create the subfolder
+				return documentsFolder;
+			}
+		}
 
 		private MamlDocument document;
 		private bool loadingDocument;

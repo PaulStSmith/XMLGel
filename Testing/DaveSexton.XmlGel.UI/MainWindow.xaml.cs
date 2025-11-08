@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -13,7 +15,7 @@ namespace DaveSexton.XmlGel.UI
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		private static readonly string dialogDefaultFolder = System.IO.Path.GetFullPath(@"..\..\..\DaveSexton.XmlGel.UnitTests\Maml\");
+		private static readonly string dialogDefaultFolder = GetTestDataFolder();
 
 		private bool IsOutputVisible
 		{
@@ -25,6 +27,35 @@ namespace DaveSexton.XmlGel.UI
 
 		private bool updating;
 		private string file;
+
+		private static string GetTestDataFolder()
+		{
+			// Try to find test data in the output directory first
+			var assemblyLocation = Assembly.GetExecutingAssembly().Location;
+			var assemblyDir = Path.GetDirectoryName(assemblyLocation);
+			var testDataPath = Path.Combine(assemblyDir, "Maml");
+			
+			if (Directory.Exists(testDataPath))
+			{
+				return testDataPath;
+			}
+			
+			// Fallback: try to find the test project relative to assembly location
+			var currentDir = assemblyDir;
+			for (int i = 0; i < 5; i++) // Search up to 5 levels up
+			{
+				var testProjectPath = Path.Combine(currentDir, "DaveSexton.XmlGel.UnitTests", "Maml");
+				if (Directory.Exists(testProjectPath))
+				{
+					return testProjectPath;
+				}
+				currentDir = Path.GetDirectoryName(currentDir);
+				if (currentDir == null) break;
+			}
+			
+			// Last fallback: return current directory
+			return Environment.CurrentDirectory;
+		}
 
 		public MainWindow()
 		{

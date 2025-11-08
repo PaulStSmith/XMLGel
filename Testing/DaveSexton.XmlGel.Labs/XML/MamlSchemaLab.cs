@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using System.Reflection;
 using System.Xml;
 using System.Xml.Linq;
 using System.Xml.Schema;
@@ -12,9 +13,30 @@ namespace DaveSexton.XmlGel.Labs.XML
 {
 	public sealed class MamlSchemaLab : BaseConsoleLab
 	{
+		private static string GetSchemasFolder()
+		{
+			// Try to find the schemas relative to assembly location
+			var assemblyLocation = Assembly.GetExecutingAssembly().Location;
+			var currentDir = Path.GetDirectoryName(assemblyLocation);
+			
+			for (int i = 0; i < 5; i++) // Search up to 5 levels up
+			{
+				var schemaPath = Path.Combine(currentDir, "Artifacts", "Schemas", "MAML", "Authoring");
+				if (Directory.Exists(schemaPath))
+				{
+					return schemaPath;
+				}
+				currentDir = Path.GetDirectoryName(currentDir);
+				if (currentDir == null) break;
+			}
+			
+			// Fallback: return current directory (will likely cause errors, but won't crash)
+			return Environment.CurrentDirectory;
+		}
+
 		protected override void Main()
 		{
-			var schemasFolder = @"F:\Projects\DaveSexton Products\DaveSexton.XmlGel\Main\Artifacts\Schemas\MAML\Authoring\";
+			var schemasFolder = GetSchemasFolder();
 
 			XmlSchema schema;
 			using (var stream = File.OpenRead(Path.Combine(schemasFolder, "developer.xsd")))

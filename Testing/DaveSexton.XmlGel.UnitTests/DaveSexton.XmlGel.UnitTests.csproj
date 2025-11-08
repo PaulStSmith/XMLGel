@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DaveSexton.XmlGel.UnitTests</RootNamespace>
     <AssemblyName>DaveSexton.XmlGel.UnitTests</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TestProjectType>UnitTest</TestProjectType>
@@ -17,6 +17,8 @@
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <RunSettingsFilePath>
+    </RunSettingsFilePath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -125,186 +127,504 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Maml\AutoFix\ConceptualDocument.aml" />
-    <None Include="Maml\AutoFix\ConceptualDocument-Expected.aml" />
-    <None Include="Maml\AutoFix\Unfixable-UnexpectedProcedure.aml" />
-    <None Include="Maml\AutoFix\SectionTitleAndMoveParaIntoMissingContent.aml" />
-    <None Include="Maml\AutoFix\SectionTitleAndMoveParaIntoMissingContent-Expected.aml" />
-    <None Include="Maml\AutoFix\MoveParaIntoMissingContent.aml" />
-    <None Include="Maml\AutoFix\MoveParaIntoMissingContent-Expected.aml" />
-    <None Include="Maml\AutoFix\SectionTitle-Expected.aml" />
-    <None Include="Maml\AutoFix\SectionTitle.aml" />
+    <Content Include="Maml\AutoFix\ConceptualDocument.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\AutoFix\ConceptualDocument-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\AutoFix\Unfixable-UnexpectedProcedure.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\AutoFix\SectionTitleAndMoveParaIntoMissingContent.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\AutoFix\SectionTitleAndMoveParaIntoMissingContent-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\AutoFix\MoveParaIntoMissingContent.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\AutoFix\MoveParaIntoMissingContent-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\AutoFix\SectionTitle-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\AutoFix\SectionTitle.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Maml\AutoFix.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AutoFix.cs</LastGenOutput>
     </None>
-    <None Include="Maml\AutoFix\Unfixable-UnexpectedProcedure.config" />
+    <Content Include="Maml\AutoFix\Unfixable-UnexpectedProcedure.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Maml\MamlGuide.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>MamlGuide.cs</LastGenOutput>
     </None>
-    <None Include="Maml\MAMLGuide\SchemaExtensibility.config" />
-    <None Include="Maml\MAMLGuide\MiscElements\markup.config" />
+    <Content Include="Maml\MAMLGuide\SchemaExtensibility.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\MiscElements\markup.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Maml\SampleTopics.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SampleTopics.cs</LastGenOutput>
     </None>
-    <None Include="Maml\SampleTopics\AIP Getting Started-Expected.aml" />
+    <Content Include="Maml\SampleTopics\AIP Getting Started-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Maml\Templates.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Templates.cs</LastGenOutput>
     </None>
-    <None Include="Maml\SampleTopics\AIP About Spam.aml" />
-    <None Include="Maml\SampleTopics\AIP Getting Assistance.aml" />
-    <None Include="Maml\SampleTopics\AIP Getting Started.aml" />
-    <None Include="Maml\SampleTopics\AIP Glossary.aml" />
-    <None Include="Maml\SampleTopics\AIP Introduction.aml" />
-    <None Include="Maml\SampleTopics\Fruits and Veggies Glossary.aml" />
-    <None Include="Maml\SampleTopics\How To Bibliography.aml" />
-    <None Include="Maml\SampleTopics\How To Linking.aml" />
-    <None Include="Maml\SampleTopics\How To Media.aml" />
-    <None Include="Maml\SampleTopics\How To Snippets.aml" />
-    <None Include="Maml\SampleTopics\How To Tokens.aml" />
-    <None Include="Maml\SampleTopics\saved.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Architecture.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Architecture-Expected.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\SilverlightMediaFramework-Expected.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\Configuration.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\Configuration-Expected.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\RemoteLogging-Expected.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\GettingStarted-Expected.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\HealthMonitor-Expected.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\Pip-Expected.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\GettingStarted.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\HealthMonitor.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\Overview.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\Pip.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\Diagnostics\RemoteLogging.aml" />
-    <None Include="Maml\UseCases\mmp-player-framework\SilverlightMediaFramework.aml" />
-    <None Include="Maml\UseCases\slimtune\Basic Concepts.aml" />
-    <None Include="Maml\UseCases\slimtune\Connect Dialog.aml" />
-    <None Include="Maml\UseCases\slimtune\Basic Concepts-Expected.aml" />
-    <None Include="Maml\UseCases\slimtune\Connect Dialog-Expected.aml" />
-    <None Include="Maml\UseCases\slimtune\Run Dialog-Expected.aml" />
-    <None Include="Maml\UseCases\slimtune\Profiler API-Expected.aml" />
-    <None Include="Maml\UseCases\slimtune\Run Dialog.config" />
-    <None Include="Maml\UseCases\slimtune\User Guide-Expected.aml" />
-    <None Include="Maml\UseCases\slimtune\Profiler API.aml" />
-    <None Include="Maml\UseCases\slimtune\Run Dialog.aml" />
-    <None Include="Maml\UseCases\slimtune\User Guide.aml" />
+    <Content Include="Maml\SampleTopics\AIP About Spam.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\AIP Getting Assistance.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\AIP Getting Started.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\AIP Glossary.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\AIP Introduction.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\Fruits and Veggies Glossary.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\How To Bibliography.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\How To Linking.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\How To Media.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\How To Snippets.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\How To Tokens.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\SampleTopics\saved.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Architecture.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Architecture-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\SilverlightMediaFramework-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\Configuration.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\Configuration-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\RemoteLogging-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\GettingStarted-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\HealthMonitor-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\Pip-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\GettingStarted.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\HealthMonitor.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\Overview.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\Pip.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\Diagnostics\RemoteLogging.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\mmp-player-framework\SilverlightMediaFramework.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\Basic Concepts.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\Connect Dialog.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\Basic Concepts-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\Connect Dialog-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\Run Dialog-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\Profiler API-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\Run Dialog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\User Guide-Expected.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\Profiler API.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\Run Dialog.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\UseCases\slimtune\User Guide.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Maml\UseCases.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>UseCases.cs</LastGenOutput>
     </None>
     <None Include="Properties\Key.snk" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Conceptual.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Error Message.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Glossary.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\How To.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Orientation.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Reference With Syntax.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Reference Without Syntax.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Reference.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Sample.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Architecture.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Code Directory.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Orientation.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Scenarios.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Summary.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\TopicFile.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Troubleshooting.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\User Interface Reference.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Walkthrough.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\Whitepaper.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TopicFiles\XML Reference.aml" />
-    <None Include="Maml\MAMLGuide\Glossary.aml" />
-    <None Include="Maml\MAMLGuide\IntelliSense.aml" />
-    <None Include="Maml\MAMLGuide\KnownIssues.aml" />
-    <None Include="Maml\MAMLGuide\Links.aml" />
-    <None Include="Maml\MAMLGuide\MSHelpViewerRoot.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\alert.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\BlockElements.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\code.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\codeReference.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\definitionTable.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\introduction.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\list.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\para.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\quote.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\relatedTopics.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\table.aml" />
-    <None Include="Maml\MAMLGuide\BlockElements\title.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\application.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\codeInline.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\command.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\CommonInline.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\computeOutputInline.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\database.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\environmentVariable.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\errorInline.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\fictiousUri.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\foreignPhrase.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\hardware.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\legacyBold.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\legacyItalic.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\legacyUnderline.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\literal.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\localUri.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\math.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\newTerm.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\phrase.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\placeholder.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\quoteInline.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\replaceable.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\subscript.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\superscript.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\system.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\ui.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\unmanagedCodeEntityReference.aml" />
-    <None Include="Maml\MAMLGuide\CommonInline\userInput.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\CodeSnippetsFile.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\CompanionFile.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\FileTypes.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\MediaContentFile.aml" />
-    <None Include="Maml\MAMLGuide\FileTypes\TokenFile.aml" />
-    <None Include="Maml\MAMLGuide\LinkElements\codeEntityReference.aml" />
-    <None Include="Maml\MAMLGuide\LinkElements\externalLink.aml" />
-    <None Include="Maml\MAMLGuide\LinkElements\Link.aml" />
-    <None Include="Maml\MAMLGuide\LinkElements\LinkElements.aml" />
-    <None Include="Maml\MAMLGuide\MediaElements\MediaElements.aml" />
-    <None Include="Maml\MAMLGuide\MediaElements\mediaLink.aml" />
-    <None Include="Maml\MAMLGuide\MediaElements\mediaLinkInline.aml" />
-    <None Include="Maml\MAMLGuide\MiscElements\autoOutline.aml" />
-    <None Include="Maml\MAMLGuide\MiscElements\autoOutlineExample.aml" />
-    <None Include="Maml\MAMLGuide\MiscElements\markup.aml" />
-    <None Include="Maml\MAMLGuide\MiscElements\MiscElements.aml" />
-    <None Include="Maml\MAMLGuide\MiscElements\Token.aml" />
-    <None Include="Maml\Templates\Conceptual.aml" />
-    <None Include="Maml\Templates\Error Message.aml" />
-    <None Include="Maml\Templates\Glossary.aml" />
-    <None Include="Maml\Templates\How To.aml" />
-    <None Include="Maml\Templates\Orientation.aml" />
-    <None Include="Maml\Templates\Reference With Syntax.aml" />
-    <None Include="Maml\Templates\Reference Without Syntax.aml" />
-    <None Include="Maml\Templates\Reference.aml" />
-    <None Include="Maml\Templates\Sample.aml" />
-    <None Include="Maml\Templates\SDK Technology Architecture.aml" />
-    <None Include="Maml\Templates\SDK Technology Code Directory.aml" />
-    <None Include="Maml\Templates\SDK Technology Orientation.aml" />
-    <None Include="Maml\Templates\SDK Technology Scenarios.aml" />
-    <None Include="Maml\Templates\SDK Technology Summary.aml" />
-    <None Include="Maml\Templates\Troubleshooting.aml" />
-    <None Include="Maml\Templates\User Interface Reference.aml" />
-    <None Include="Maml\Templates\Walkthrough.aml" />
-    <None Include="Maml\Templates\Whitepaper.aml" />
-    <None Include="Maml\Templates\XML Reference.aml" />
-    <None Include="Maml\MAMLGuide\VersionHistory\v1.0.0.0.aml" />
-    <None Include="Maml\MAMLGuide\VersionHistory\v1.1.0.0.aml" />
-    <None Include="Maml\MAMLGuide\VersionHistory\v1.1.0.1.aml" />
-    <None Include="Maml\MAMLGuide\VersionHistory\v1.1.0.2.aml" />
-    <None Include="Maml\MAMLGuide\VersionHistory\VersionHistory.aml" />
-    <None Include="Maml\MAMLGuide\SchemaExtensibility.aml" />
-    <None Include="Maml\MAMLGuide\Welcome.aml" />
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Conceptual.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Error Message.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Glossary.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\How To.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Orientation.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Reference With Syntax.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Reference Without Syntax.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Reference.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Sample.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Architecture.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Code Directory.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Orientation.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Scenarios.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\SDK Technology Summary.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\TopicFile.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Troubleshooting.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\User Interface Reference.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Walkthrough.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\Whitepaper.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TopicFiles\XML Reference.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\Glossary.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\IntelliSense.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\KnownIssues.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\Links.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\MSHelpViewerRoot.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\alert.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\BlockElements.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\code.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\codeReference.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\definitionTable.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\introduction.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\list.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\para.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\quote.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\relatedTopics.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\table.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\BlockElements\title.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\application.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\codeInline.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\command.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\CommonInline.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\computeOutputInline.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\database.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\environmentVariable.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\errorInline.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\fictiousUri.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\foreignPhrase.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\hardware.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\legacyBold.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\legacyItalic.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\legacyUnderline.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\literal.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\localUri.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\math.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\newTerm.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\phrase.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\placeholder.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\quoteInline.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\replaceable.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\subscript.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\superscript.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\system.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\ui.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\unmanagedCodeEntityReference.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\CommonInline\userInput.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\CodeSnippetsFile.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\CompanionFile.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\FileTypes.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\MediaContentFile.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\FileTypes\TokenFile.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\LinkElements\codeEntityReference.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\LinkElements\externalLink.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\LinkElements\Link.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\LinkElements\LinkElements.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\MediaElements\MediaElements.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\MediaElements\mediaLink.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\MediaElements\mediaLinkInline.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\MiscElements\autoOutline.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\MiscElements\autoOutlineExample.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\MiscElements\markup.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\MiscElements\MiscElements.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\MiscElements\Token.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Conceptual.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Error Message.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Glossary.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\How To.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Orientation.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Reference With Syntax.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Reference Without Syntax.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Reference.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Sample.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\SDK Technology Architecture.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\SDK Technology Code Directory.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\SDK Technology Orientation.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\SDK Technology Scenarios.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\SDK Technology Summary.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Troubleshooting.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\User Interface Reference.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Walkthrough.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\Whitepaper.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\Templates\XML Reference.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\VersionHistory\v1.0.0.0.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\VersionHistory\v1.1.0.0.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\VersionHistory\v1.1.0.1.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\VersionHistory\v1.1.0.2.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\VersionHistory\VersionHistory.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\SchemaExtensibility.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Maml\MAMLGuide\Welcome.aml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
